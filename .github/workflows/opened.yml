@@ -10,4 +10,8 @@ jobs:
       - name: 'setup-python'
         run : |
           echo "${{ github.event.issue.user.name }} || ${{ github.event.issue.user.login }}"
-          echo "${{ github.event.issue.user.created_at }}"
+          echo "${{ github.event.issue.title }}"
+          echo "${{ github.event.issue.body }}"
+          echo "${{ github.event.issue.id }}"
+          echo "${{ github.event.issue.state }}"
+          echo "${{ github.event.issue.number }}"
