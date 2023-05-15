@@ -1,0 +1,13 @@
+name: 'gha-test'
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  print-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'setup-python'
+        run : |
+          echo "${{ github.event.issue.user.name }} || ${{ github.event.issue.user.login }}"
+          echo "${{ github.event.issue.user.created_at }}"
